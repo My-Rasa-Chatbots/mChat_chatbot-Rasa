@@ -1,0 +1,7 @@
+.rasa
+venv
+.vscode
+excel_to_mongo.py
+*.pyc
+ __pycache__
+actions/__pycache__/actions.cpython-39.pyc
