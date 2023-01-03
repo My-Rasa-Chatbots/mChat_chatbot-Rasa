@@ -28,6 +28,18 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+#######################################
+- story: asking more question
+  steps:
+  - action: utter_can_i_help_more
+  - intent: affirm
+  - action: utter_type_query_below
+
+- story: not asking more question
+  steps:
+  - action: utter_can_i_help_more
+  - intent: deny
+  - action: utter_goodbye
 
 #######################################
 - story: ask about marlabs
