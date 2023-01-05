@@ -115,7 +115,7 @@ class ActionUtterAboutMarlabs(Action):
         resp_name = "utter_about_marlabs"
         response = getResponse(resp_name)
         dispatcher.utter_message(json_message=response)
-        return [FollowupAction(name="utter_can_i_help_more")]
+        return [FollowupAction(name="action_utter_can_i_help_more")]
 
 class ActionUtterWhatDoYouDo(Action):
     def name(self) -> Text:
@@ -128,7 +128,7 @@ class ActionUtterWhatDoYouDo(Action):
         resp_name = "utter_what_do_you_do"
         response = getResponse(resp_name)
         dispatcher.utter_message(json_message=response)
-        return [FollowupAction(name="utter_can_i_help_more")]
+        return [FollowupAction(name="action_utter_can_i_help_more")]
 
 class ActionUtterTalkToAdvisor(Action):
     def name(self) -> Text:
@@ -141,7 +141,7 @@ class ActionUtterTalkToAdvisor(Action):
         resp_name = "utter_talk_to_advisor"
         response = getResponse(resp_name)
         dispatcher.utter_message(json_message=response)
-        return [FollowupAction(name="utter_can_i_help_more")]
+        return [FollowupAction(name="action_utter_can_i_help_more")]
 
 class ActionUtterMarlabsCareer(Action):
     def name(self) -> Text:
@@ -154,7 +154,7 @@ class ActionUtterMarlabsCareer(Action):
         resp_name = "utter_marlabs_career"
         response = getResponse(resp_name)
         dispatcher.utter_message(json_message=response)
-        return [FollowupAction(name="utter_can_i_help_more")]
+        return [FollowupAction(name="action_utter_can_i_help_more")]
 
 class ActionUtterLatestPublications(Action):
     def name(self) -> Text:
@@ -167,4 +167,4 @@ class ActionUtterLatestPublications(Action):
         resp_name = "utter_latest_publications"
         response = getResponse(resp_name)
         dispatcher.utter_message(json_message=response)
-        return [FollowupAction(name="utter_can_i_help_more")]
+        return [FollowupAction(name="action_utter_can_i_help_more")]
