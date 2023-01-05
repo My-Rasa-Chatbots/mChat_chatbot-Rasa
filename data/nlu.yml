@@ -92,6 +92,12 @@ nlu:
     - am I talking to a bot?
     - am I talking to a human?
 
+- intent: nlu_fallback
+  examples: |
+    - What is RPA
+    - What is NLU
+    - What is Data Science
+    - What is BPM
 ######################################################
 
 - intent: about_marlabs

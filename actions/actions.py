@@ -103,6 +103,18 @@ class ActionUtterTypeQueryBelow(Action):
         return []
 
 
+class ActionUtterPleaseRephrase(Action):
+    def name(self) -> Text:
+        return "action_utter_please_rephrase"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        resp_name = "utter_please_rephrase"
+        response = getResponse(resp_name)
+        dispatcher.utter_message(json_message=response)
+        return []
 #################################################
 class ActionUtterAboutMarlabs(Action):
     def name(self) -> Text:

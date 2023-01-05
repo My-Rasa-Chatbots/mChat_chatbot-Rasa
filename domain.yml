@@ -9,6 +9,8 @@ intents:
   - mood_unhappy
   - bot_challenge
 
+  - nlu_fallback
+
   - about_marlabs
   - what_do_you_do
   - talk_to_advisor
@@ -18,6 +20,7 @@ intents:
 actions:
 - action_utter_greet
 - action_utter_goodbye
+- action_utter_please_rephrase
 - action_utter_can_i_help_more
 - action_utter_type_query_below
 
