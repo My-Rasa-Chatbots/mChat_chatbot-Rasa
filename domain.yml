@@ -17,6 +17,10 @@ intents:
 
 actions:
 - action_utter_greet
+- action_utter_goodbye
+- action_utter_can_i_help_more
+- action_utter_type_query_below
+
 - action_utter_about_marlabs
 - action_utter_what_do_you_do
 - action_utter_talk_to_advisor
@@ -34,21 +38,15 @@ responses:
   utter_happy:
   - text: "Great, carry on!"
 
-  utter_goodbye:
-  - text: "Goodbye! It was nice talking to you."
-  - text: "Bye for now. Have a great day!"
-  - text: "Thank you for chatting with me. Bye!"
-  - text: "Goodbye! If you have any more questions, don't hesitate to ask."
-  - text: "Bye, have a great day"
+  # utter_goodbye:
+  # - text: "Goodbye! It was nice talking to you."
+  # - text: "Bye for now. Have a great day!"
+  # - text: "Thank you for chatting with me. Bye!"
+  # - text: "Goodbye! If you have any more questions, don't hesitate to ask."
+  # - text: "Bye, have a great day."
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
-
-  utter_can_i_help_more:
-  - text: "Can i help you with anything more?"
-
-  utter_type_query_below:
-  - text: "Please type your query below."
 
 session_config:
   session_expiration_time: 60

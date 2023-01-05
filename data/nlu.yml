@@ -38,6 +38,8 @@ nlu:
     - of course
     - that sounds good
     - correct
+    - sure
+    - why not
 
 - intent: deny
   examples: |

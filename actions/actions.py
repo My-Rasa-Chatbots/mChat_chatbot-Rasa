@@ -7,6 +7,7 @@ from rasa_sdk.events import EventType, AllSlotsReset, FollowupAction
 import re
 import time
 import pymongo
+import random
 
 # MongoDB connection
 
@@ -37,6 +38,11 @@ def getResponse(response_name):
             return []
         response = res["response_payload"]
         # print(my_coll.find({"response_name": response_name}).explain()["executionStats"])
+        for item in response:
+          if(item['type']=="text"):
+            data = item['data']
+            selected_text = random.choice(data)
+            item['data'] = selected_text
         return response
     except pymongo.errors.OperationFailure as e:
         print("MongoDB Operational Failure: ", e.details)
@@ -57,6 +63,47 @@ class ActionUtterGreet(Action):
         dispatcher.utter_message(json_message=response)
         return []
 
+class ActionUtterGoodbye(Action):
+    def name(self) -> Text:
+        return "action_utter_goodbye"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        resp_name = "utter_goodbye"
+        response = getResponse(resp_name)
+        dispatcher.utter_message(json_message=response)
+        return []
+
+class ActionUtterCanIHelpMore(Action):
+    def name(self) -> Text:
+        return "action_utter_can_i_help_more"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        resp_name = "utter_can_i_help_more"
+        response = getResponse(resp_name)
+        dispatcher.utter_message(json_message=response)
+        return []
+
+class ActionUtterTypeQueryBelow(Action):
+    def name(self) -> Text:
+        return "action_utter_type_query_below"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        resp_name = "utter_type_query_below"
+        response = getResponse(resp_name)
+        dispatcher.utter_message(json_message=response)
+        return []
+
+
+#################################################
 class ActionUtterAboutMarlabs(Action):
     def name(self) -> Text:
         return "action_utter_about_marlabs"
