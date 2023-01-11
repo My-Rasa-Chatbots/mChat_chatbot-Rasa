@@ -33,7 +33,7 @@ stories:
   steps:
   - action: action_utter_can_i_help_more
   - intent: affirm
-  - action: action_utter_type_query_below
+  - action: action_utter_menu
 
 - story: not asking more question
   steps:

@@ -61,6 +61,19 @@ class ActionUtterGreet(Action):
         resp_name = "utter_greet"
         response = getResponse(resp_name)
         dispatcher.utter_message(json_message=response)
+        return [FollowupAction(name="action_utter_menu")]
+
+class ActionUtterMenu(Action):
+    def name(self) -> Text:
+        return "action_utter_menu"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        resp_name = "utter_menu"
+        response = getResponse(resp_name)
+        dispatcher.utter_message(json_message=response)
         return []
 
 class ActionUtterGoodbye(Action):

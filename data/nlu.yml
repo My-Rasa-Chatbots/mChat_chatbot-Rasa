@@ -138,41 +138,39 @@ nlu:
 
 - intent: talk_to_advisor
   examples: |
-    - I have some questions that I'd like to discuss with a digital advisor. Is that possible?
+    - I have some questions that I'd like to discuss with a digital advisor?
     - Can I speak with a digital advisor to get some advice on my situation?
-    - I'm interested in getting some guidance from a digital advisor. How can I do that?
+    - I'm interested in getting some guidance from a digital advisor?
     - Is there a way to speak with a digital advisor about my concerns?
-    - I'm looking for a digital advisor to talk to about my situation. Can you help me find one?
-    - I'd like to speak with a digital advisor to discuss my options. Is that possible?
+    - I'm looking for a digital advisor to talk to about my situation?
+    - I'd like to speak with a digital advisor to discuss my options?
     - Can I get in touch with a digital advisor to ask some questions?
-    - I have some concerns that I'd like to talk to a digital advisor about. Is there someone I can speak with?
+    - I have some concerns that I'd like to talk to a digital advisor about?
     - Is there a way to consult with a digital advisor about my situation?
-    - I'm interested in speaking with a digital advisor to get some guidance. How can I do that?
-    - I'd like to speak with a digital advisor about my options. Can you help me with that?
+    - I'm interested in speaking with a digital advisor to get some guidance?
+    - I'd like to speak with a digital advisor about my options?
     - Is it possible to get in touch with a digital advisor to ask some questions?
-    - I have some concerns that I'd like to discuss with a digital advisor. Is that possible?
+    - I have some concerns that I'd like to discuss with a digital advisor?
     - Can I speak with a digital advisor to get some advice on my concerns?
     - I'm looking for a digital advisor to talk to. Is there someone I can speak with?
     - Can I speak with a digital advisor to get some guidance on my situation?
     - I have some questions and I'm wondering if I can speak with a digital advisor.
     - Is there a way to get in touch with a digital advisor for some advice?
-    - I'm looking for a digital advisor to talk to. Is there someone I can speak with?
+    - Is there someone I can speak with?
     - Can I speak with a digital advisor?
-    - I'd like to get some advice from a digital advisor. Is that possible?
+    - I'd like to get some advice from a digital advisor?
     - I have a question and I'm wondering if I can speak with a digital advisor.
     - Is there a way to consult with a digital advisor about my situation?
-    - I'm looking for a digital advisor to talk to. Is there someone I can speak with?
-    - I'd like to consult with a digital advisor about my situation. Is that possible?
+    - I'm looking for a digital advisor to talk to.
+    - I'd like to consult with a digital advisor about my situation?
     - Can I speak with a digital advisor to get some advice on my concerns?
     - Is it possible to have a conversation with a digital advisor to discuss my options?
-    - I have some questions that I'd like to ask a digital advisor. Can you help me find one?
-    - I'm looking for a digital advisor to talk to. Can you help me find one?
-    - I'd like to speak with a digital advisor about my options. Is that possible?
-    - Can I speak with a digital advisor to get some guidance on my situation?
-    - Is there a way to consult with a digital advisor about my concerns?
-    - I'm interested in getting advice from a digital advisor. How can I do that?
-    - I'm looking for a digital advisor to talk to. Is there someone I can speak with?
-
+    - I have some questions that I'd like to ask a digital advisor?
+    - I'm looking for a digital advisor to talk to?
+    - I'd like to speak with a digital advisor about my options?
+    - Can I speak with a digital advisor?
+    - I'm looking for a digital advisor to talk to. Is there someone I can speak witr
+  
 - intent: marlabs_career
   examples: |
     - I'm interested in a career with Marlabs?
@@ -187,6 +185,18 @@ nlu:
     - Share your career?
     - I want to know more about marlabs career?
     - show your company career?
+    - I'm interested in a job with Marlabs?
+    - Show something about jobs at marlabs?
+    - Marlabs jobs?
+    - Jobs at marlabs?
+    - Show marlabs jobs page?
+    - Job?
+    - Tell something about Marlabs new opening?
+    - campany new openings?
+    - Tell something about company new jobs opening?
+    - Share your new openings?
+    - I want to know more about marlabs new job openings?
+    - show your company job portal?
 
 - intent: latest_publications
   examples: |

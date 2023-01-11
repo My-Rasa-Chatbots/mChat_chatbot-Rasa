@@ -19,6 +19,7 @@ intents:
 
 actions:
 - action_utter_greet
+- action_utter_menu
 - action_utter_goodbye
 - action_utter_please_rephrase
 - action_utter_can_i_help_more
