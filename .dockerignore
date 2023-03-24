@@ -1,0 +1,9 @@
+.rasa
+.vscode
+.actions
+venv
+.gitignore
+.dockerignore
+.env
+getting_started.txt
+story_graph.dot

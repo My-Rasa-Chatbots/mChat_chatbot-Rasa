@@ -4,28 +4,31 @@ from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.types import DomainDict
 from rasa_sdk.events import EventType, AllSlotsReset, FollowupAction
 
+import os
 import re
 import time
 import pymongo
 import random
 
 # MongoDB connection
+from dotenv import load_dotenv
+load_dotenv()
+
 
 
 def connectDB(coll_name):
-    conn_str = "mongodb+srv://keshab:keshab123@cluster0.bqo0o.mongodb.net/?retryWrites=true&w=majority"
+    conn_str = os.getenv('MONGODB_URL_LOCAL')
     try:
         client = pymongo.MongoClient(conn_str)
-        db_name = "marlabs_chatbot"
+        db_name = "chatbot"
         my_db = client[db_name]
         my_coll = my_db[coll_name]
-        # print("DB Connected successfully:")
+        print("DB Connected successfully:", conn_str)
         return my_coll
     except pymongo.errors.ConnectionFailure as e:
         print("Database connection problem: ", str(e))
 
 # query DB and send response
-
 
 def getResponse(response_name):
     coll_name = "responses"
@@ -60,6 +63,7 @@ class ActionUtterGreet(Action):
 
         resp_name = "utter_greet"
         response = getResponse(resp_name)
+
         dispatcher.utter_message(json_message=response)
         return [FollowupAction(name="action_utter_menu")]
 

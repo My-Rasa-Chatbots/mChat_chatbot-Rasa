@@ -40,6 +40,12 @@ nlu:
     - correct
     - sure
     - why not
+    - yaa
+    - yap
+    - yep
+    - sure
+    - why not
+    - always
 
 - intent: deny
   examples: |
@@ -51,6 +57,10 @@ nlu:
     - no way
     - not really
     - not required
+    - naa
+    - not sure
+    - no thank you
+    - never
 
 - intent: mood_great
   examples: |

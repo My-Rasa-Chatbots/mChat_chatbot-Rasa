@@ -30,15 +30,6 @@ actions:
 - action_utter_latest_publications
 
 responses:
-  # utter_cheer_up:
-  # - text: "Here is something to cheer you up:"
-  #   image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  # utter_did_that_help:
-  # - text: "Did that help you?"
-
-  # utter_happy:
-  # - text: "Great, carry on!"
 
   # utter_goodbye:
   # - text: "Goodbye! It was nice talking to you."
