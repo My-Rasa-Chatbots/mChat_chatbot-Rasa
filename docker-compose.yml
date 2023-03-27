@@ -28,13 +28,13 @@ services:
     depends_on:
       - mongo_db
 
-  # MOngoDB COntainer
-  mongo_db:
-    container_name: mongo_db
-    image: mongo:latest
-    expose:
-      - 27017
-    ports:
-      - 27016:27017
-    volumes:
-      - /media/sk/Drive/RASA/mongodb/data/db:/data/db
+  # MongoDB Container
+  # mongo_db:
+  #   container_name: mongo_db
+  #   image: mongo:latest
+  #   expose:
+  #     - 27017
+  #   ports:
+  #     - 27016:27017
+  #   volumes:
+  #     - /media/sk/Drive/RASA/mongodb/data/db:/data/db
