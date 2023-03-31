@@ -1,0 +1,5 @@
+1. Feature
+2. Develop
+3. Release
+4. Production(main)
+

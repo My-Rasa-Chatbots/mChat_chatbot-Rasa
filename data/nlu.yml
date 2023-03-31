@@ -9,7 +9,7 @@ nlu:
     - hello there
     - good morning
     - good evening
-    - moin
+    - morning
     - hey there
     - let's go
     - hey dude
@@ -62,39 +62,39 @@ nlu:
     - no thank you
     - never
 
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+# - intent: mood_great
+#   examples: |
+#     - perfect
+#     - great
+#     - amazing
+#     - feeling like a king
+#     - wonderful
+#     - I am feeling very good
+#     - I am great
+#     - I am amazing
+#     - I am going to save the world
+#     - super stoked
+#     - extremely good
+#     - so so perfect
+#     - so good
+#     - so perfect
 
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+# - intent: mood_unhappy
+#   examples: |
+#     - my day was horrible
+#     - I am sad
+#     - I don't feel very well
+#     - I am disappointed
+#     - super sad
+#     - I'm so sad
+#     - sad
+#     - very sad
+#     - unhappy
+#     - not good
+#     - not very good
+#     - extremly sad
+#     - so saad
+#     - so sad
 
 - intent: bot_challenge
   examples: |
@@ -217,25 +217,21 @@ nlu:
     - Any publications available about business and technology?
     - Is there any publications regarding technology? 
     - Could you list out recent publications about business and technology
-
     - How do I find recent Case studies ?
     - Can you provide latest Case studies ?
     - Any Case studies  available about business and technology?
     - Is there any Case studies  regarding technology? 
     - Could you list out recent Case studies  about business and technology
-
     - How do I find recent Whitepapers ?
     - Can you provide latest Whitepapers ?
     - Any Whitepapers  available about business and technology?
     - Is there any Whitepapers  regarding technology? 
     - Could you list out recent Whitepapers  about business and technology
-
     - How do I find recent Podcasts?
     - Can you provide latest Podcasts?
     - Any Podcasts available about business and technology?
     - Is there any Podcasts regarding technology? 
     - Could you list out recent Podcasts about business and technology
-
     - How do I find recent Videos?
     - Can you provide latest Videos?
     - Any Videos available about business and technology?

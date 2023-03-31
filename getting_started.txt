@@ -9,6 +9,16 @@ Setps to follow:
 7. Additional dependencies for database connection:
     + pymongo> pip install pymongo
 
+Testing:CI:
+>> rasa data validate --fail-on-warnings
+>> rasa test --stories
+
+>> rasa test core
+
+>> rasa data split nlu
+>> rasa test nlu --nlu train_test_split/test_data.yml
+>> rasa test nlu --nlu data/nlu --cross-validation
+
 8. To train Rasa Model: >rasa train
 
 9. To run Rasa Action Server: >rasa run actions 

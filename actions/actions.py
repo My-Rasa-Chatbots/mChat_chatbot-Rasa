@@ -16,7 +16,7 @@ load_dotenv()
 
 
 def connectDB(coll_name):
-    conn_str = os.getenv('MONGODB_URL')
+    conn_str = os.getenv('MONGODB_URL_LOCAL')
     try:
         client = pymongo.MongoClient(conn_str)
         db_name = "marlabs_chatbot"

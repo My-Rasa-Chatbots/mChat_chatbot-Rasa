@@ -1,0 +1,30 @@
+stories:
+- story: greeting story test
+  steps:
+  - user: |
+      hello
+    intent: greet
+  - action: action_utter_greet
+
+- story: asking more question story test
+  steps:
+  - action: action_utter_can_i_help_more
+  - user: |
+      yes
+    intent: affirm
+  - action: action_utter_menu
+
+- story: not asking more question story test
+  steps:
+  - action: action_utter_can_i_help_more
+  - user: |
+      no
+    intent: deny
+  - action: action_utter_goodbye
+
+
+- story: A test where a user clicks on a restart button
+  steps:
+  - user: /restart
+    intent: restart
+  - action: action_restart

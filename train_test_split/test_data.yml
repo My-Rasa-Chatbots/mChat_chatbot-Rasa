@@ -1,0 +1,57 @@
+version: "3.1"
+nlu:
+- intent: bot_challenge
+  examples: |
+    - am I talking to a human?
+- intent: nlu_fallback
+  examples: |
+    - What is NLU
+- intent: goodbye
+  examples: |
+    - good night
+    - cu
+- intent: deny
+  examples: |
+    - no
+    - don't like that
+- intent: what_do_you_do
+  examples: |
+    - What you do?
+    - What do you do?
+- intent: affirm
+  examples: |
+    - that sounds good
+    - yaa
+    - yap
+- intent: greet
+  examples: |
+    - morning
+    - hello there
+- intent: about_marlabs
+  examples: |
+    - Tell somethings about your company?
+    - Marlabs?
+    - Marlabs info?
+    - Tell me something about marlabs?
+- intent: marlabs_career
+  examples: |
+    - Marlabs jobs?
+    - Tell something about company new jobs opening?
+    - show your company career?
+    - Job?
+    - Jobs at marlabs?
+- intent: latest_publications
+  examples: |
+    - How do I find recent publications?
+    - Is there any Whitepapers  regarding technology?
+    - Can you provide latest publications?
+    - How do I find recent Videos?
+    - Any Case studies  available about business and technology?
+- intent: talk_to_advisor
+  examples: |
+    - I'd like to get some advice from a digital advisor?
+    - I'm looking for a digital advisor to talk to. Is there someone I can speak with?
+    - I have some questions that I'd like to ask a digital advisor?
+    - I have a question and I'm wondering if I can speak with a digital advisor.
+    - I'm interested in speaking with a digital advisor to get some guidance?
+    - I have some questions and I'm wondering if I can speak with a digital advisor.

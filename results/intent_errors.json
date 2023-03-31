@@ -1,0 +1,10 @@
+[
+  {
+    "text": "What is NLU",
+    "intent": "nlu_fallback",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.0017593433149158955
+    }
+  }
+]
