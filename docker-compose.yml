@@ -1,6 +1,28 @@
 version: '3'
 
 services:
+<<<<<<< Updated upstream
+=======
+  # Reverse proxy nginx server
+  reverse_proxy:
+    container_name: reverse_proxy
+    image: nginx:stable
+    depends_on:
+      - rasa_server
+    volumes:
+      - ./reverse_proxy/nginx.conf:/etc/nginx/nginx.conf
+    ports:
+    # nginx_ext_port:container_inter_port
+      - 5005:5005
+    deploy:
+      restart_policy:
+        condition: on-failure
+    networks:
+      - rasa_chatbot_network
+  
+
+  # Rasa core open source container
+>>>>>>> Stashed changes
   rasa_server:
     container_name: rasa_server
     ports:
@@ -18,17 +40,31 @@ services:
   action_server:
     container_name: action_server
     environment:
-      - MONGODB_URL_LOCAL=mongodb://mongo_db:27016
+      # - MONGODB_URL_LOCAL=mongodb://mongo_db:27017
+      - MONGODB_URL_LOCAL=mongodb://host.docker.internal:27017
     expose:
       - 5055
     image: action-server:0.0.1
     volumes:
       - ./actions/actions.py:/app/actions/actions.py
       - ./actions/__init__.py:/app/actions/__init__.py
+<<<<<<< Updated upstream
     depends_on:
       - mongo_db
 
   # MongoDB Container
+=======
+    # depends_on:
+    #   - mongo_db
+    networks:
+      - rasa_chatbot_network
+    deploy:
+      restart_policy:
+        condition: on-failure
+
+
+  # # MongoDB database container
+>>>>>>> Stashed changes
   # mongo_db:
   #   container_name: mongo_db
   #   image: mongo:latest
@@ -37,4 +73,17 @@ services:
   #   ports:
   #     - 27016:27017
   #   volumes:
+<<<<<<< Updated upstream
   #     - /media/sk/Drive/RASA/mongodb/data/db:/data/db
+=======
+  #     - /media/sk/Drive/RASA/mongodb/data/db:/data/db
+  #   networks:
+  #     - rasa_chatbot_network
+  #   deploy:
+  #     restart_policy:
+  #       condition: on-failure
+
+
+networks:
+  rasa_chatbot_network:
+>>>>>>> Stashed changes

@@ -19,3 +19,7 @@ Setps to follow:
 * To run Rasa Interactive CLI: >rasa interactive
 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+DOCKER CONTAINERS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+>> docker restart
