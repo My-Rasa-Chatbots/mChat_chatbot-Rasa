@@ -13,3 +13,6 @@ train_test_split
 results
 builddockerimage.sh
 models
+docker-compose.*.yml
+Dockerfile
+dev_rundockercontainers.sh
