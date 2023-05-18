@@ -7,3 +7,12 @@ venv
 .env
 getting_started.txt
 story_graph.dot
+branching_convention.txt
+test
+train_test_split
+results
+builddockerimage.sh
+models
+docker-compose.*.yml
+Dockerfile
+dev_rundockercontainers.sh

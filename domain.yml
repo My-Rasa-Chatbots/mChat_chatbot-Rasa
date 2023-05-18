@@ -30,7 +30,6 @@ actions:
 - action_utter_latest_publications
 
 responses:
-
   # utter_goodbye:
   # - text: "Goodbye! It was nice talking to you."
   # - text: "Bye for now. Have a great day!"
@@ -40,6 +39,9 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, developed by Marlabs and powered by Rasa."
+
+  utter_apologize:
+  - text: "I apologies for the inconvenient."
 
 session_config:
   session_expiration_time: 60

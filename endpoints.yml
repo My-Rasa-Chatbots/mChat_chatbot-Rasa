@@ -11,7 +11,7 @@
 # https://rasa.com/docs/rasa/custom-actions
 
 action_endpoint:
- url: "http://localhost:5055/webhook"
+ url: http://action_server:5055/webhook
 
 # Tracker store which is used to store the conversations.
 # By default the conversations are stored in memory.
@@ -25,12 +25,12 @@ action_endpoint:
 #    password: <password used for authentication>
 #    use_ssl: <whether or not the communication is encrypted, default false>
 
-# tracker_store:
-#    type: mongod
-#    url: mongodb://localhost:27017
-#    db: chatbot
-  #  username: keshab
-  #  password: keshab
+tracker_store:
+   type: mongod
+   url: ${RASA_MONGODB_URI}
+   db: ${RASA_MONGODB_DB}
+   username: ${RASA_MONGODB_USERNAME}
+   password: ${RASA_MONGODB_PASSWORD}
 
 # Event broker which all conversation events should be streamed to.
 # https://rasa.com/docs/rasa/event-brokers

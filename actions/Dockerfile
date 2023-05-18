@@ -4,8 +4,8 @@ WORKDIR /app
 
 USER root
 
-ENV MONGODB_URL_LOCAL=mongodb://localhost:27017
-ENV MONGODB_RESPONSE_DB=socket-chatbot
+# ENV MONGODB_URL_LOCAL=mongodb://localhost:27017
+# ENV MONGODB_RESPONSE_DB=socket-chatbot
 
 COPY ./ /app/actions
 

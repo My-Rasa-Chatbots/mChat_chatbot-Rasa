@@ -7,6 +7,22 @@ stories:
   - intent: greet
   - action: action_utter_greet
 
+- story: Ask the user to rephrase - Unhappy path
+  steps:
+  - intent: nlu_fallback
+  - action: action_utter_please_rephrase
+  - intent: deny
+  - action: utter_apologize
+  - action: action_utter_can_i_help_more
+
+- story: Ask the user to rephrase - Happy path
+  steps:
+  - intent: nlu_fallback
+  - action: action_utter_please_rephrase
+  - intent: affirm
+  - action: action_utter_menu
+
+
 #######################################
 - story: asking more question
   steps:

@@ -1,5 +1,6 @@
 .rasa
 venv
+*.env
 .vscode
 excel_to_mongo.py
 *.pyc
@@ -7,3 +8,8 @@ excel_to_mongo.py
 actions/__pycache__/actions.cpython-39.pyc
 nlu.json
 nlu_yml_to_json.py
+models
+getting_started.txt
+docker-compose.dev.yml
+.gitignore
+dev_run.sh
