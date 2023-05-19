@@ -1,11 +1,10 @@
 FROM rasa/rasa-sdk:3.1.3
 
+LABEL org.opencontainers.image.source https://github.com/marlabs-chatbot/marlabs_chatbot-Rasa
+
 WORKDIR /app
 
 USER root
-
-# ENV MONGODB_URL_LOCAL=mongodb://localhost:27017
-# ENV MONGODB_RESPONSE_DB=socket-chatbot
 
 COPY ./ /app/actions
 

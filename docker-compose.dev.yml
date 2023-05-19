@@ -1,0 +1,93 @@
+version: '3'
+
+services:
+  # Reverse proxy nginx server
+  reverse_proxy:
+    container_name: reverse_proxy
+    image: nginx:stable
+    depends_on:
+      - rasa_server
+    volumes:
+      - ./reverse_proxy/nginx.conf:/etc/nginx/nginx.conf
+    ports:
+    # nginx_ext_port:container_inter_port
+      - 5005:5005
+    deploy:
+      restart_policy:
+        condition: on-failure
+    networks:
+      - rasa_chatbot_network
+  
+  # Rasa core open source container
+  rasa_server:
+    container_name: rasa_server
+    environment:
+      - RASA_MONGODB_URI=mongodb://mongo_db:27017
+      - RASA_MONGODB_DB=marlabs_chatbot
+      - RASA_MONGODB_USERNAME=root
+      - RASA_MONGODB_PASSWORD=pass
+
+    expose:
+      - 5005
+    image: rasa-server-img-prod:0.0.2
+    command:
+      - run
+      - --enable-api
+      - --cors
+      - "*"
+    volumes:
+      - ./endpoints.yml:/app/endpoints.yml
+    depends_on:
+      - action_server
+    networks:
+      - rasa_chatbot_network
+    deploy:
+      restart_policy:
+        condition: on-failure
+  
+  action_server:
+    container_name: action_server
+    environment:
+      - MONGODB_URL_LOCAL=mongodb://root:pass@mongo_db:27017
+      # - MONGODB_HOST=mongodb://mongo_db
+      # - MONGODB_PORT=27017
+      # - MONGODB_USERNAME=root
+      # - MONGODB_PASSWORD=pass
+    expose:
+      - 5055
+    image: action-server-img-prod:0.0.2
+    volumes:
+      - ./actions/actions.py:/app/actions/actions.py
+      - ./actions/__init__.py:/app/actions/__init__.py
+    depends_on:
+      - mongo_db
+    networks:
+      - rasa_chatbot_network
+    deploy:
+      restart_policy:
+        condition: on-failure
+
+
+  # MongoDB database container
+  mongo_db:
+    container_name: mongo_db
+    image: mongo:latest
+    expose:
+      - 27017
+    ports:
+      - 27017:27017
+    volumes:
+      - ../mongodb/db:/data/db
+    environment:
+      # provide your credentials here
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=pass
+    # command: mongod
+    networks:
+      - rasa_chatbot_network
+    deploy:
+      restart_policy:
+        condition: on-failure
+
+networks:
+  rasa_chatbot_network:

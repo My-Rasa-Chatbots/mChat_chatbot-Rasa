@@ -10,6 +10,4 @@ nlu.json
 nlu_yml_to_json.py
 models
 getting_started.txt
-docker-compose.dev.yml
 .gitignore
-dev_run.sh
