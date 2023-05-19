@@ -17,8 +17,28 @@ load_dotenv()
 
 def connectDB(coll_name):
     conn_str = os.getenv('MONGODB_URL_LOCAL')
+    HOST = os.getenv('MONGODB_HOST')
+    PORT = os.getenv('MONGODB_PORT')
+    USERNAME = os.getenv('MONGODB_USERNAME')
+    PASSWORD = os.getenv('MONGODB_PASSWORD')
     try:
-        client = pymongo.MongoClient(conn_str)
+        client=""
+        print(conn_str)
+        if(str(conn_str) != "" or len(str(HOST)) < 1):
+            client = pymongo.MongoClient(conn_str)    
+        else:
+            client = pymongo.MongoClient(
+                host=HOST,
+                port=int(PORT),
+                tls=True,
+                tlsInsecure=True,
+                retryWrites=False,
+                tlsCAFile="global-bundle.pem",
+                directConnection=True,
+                username=USERNAME,
+                password=PASSWORD,
+                authSource='admin'
+            )
         db_name = "marlabs_chatbot"
         my_db = client[db_name]
         my_coll = my_db[coll_name]

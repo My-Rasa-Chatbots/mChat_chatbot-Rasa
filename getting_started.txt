@@ -22,5 +22,24 @@ Setps to follow:
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 DOCKER CONTAINERS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
->> docker restart
+>> docker restart <name/id>
 >> docker-compose -f docker-compose.dev.yml
+>> docker exec -it <name/id> /bin/bash
+
+//////////////////////////////////////////////////////
+export CR_PAT=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
+echo $CR_PAT | docker login ghcr.io -u keshabmanni --password-stdin
+::::::::::::::::::::::::::::::::::::::::::::::::::
+ghcr token : 
+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
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+
+docker tag bc3a5a5cca44 ghcr.io/marlabs-chatbot/rasa-server-img-prod:0.0.2
+docker tag 8d0b16a5b516 ghcr.io/marlabs-chatbot/action-server-img-prod:0.0.2 
+
+docker push ghcr.io/marlabs-chatbot/rasa-server-img-prod:0.0.2
+docker push ghcr.io/marlabs-chatbot/action-server-img-prod:0.0.2 
+''''
+
+add it to docker file to tie to registry
+LABEL org.opencontainers.image.source https://github.com/OWNER/REPO
