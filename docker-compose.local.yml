@@ -11,7 +11,7 @@ services:
       - ./reverse_proxy/nginx.conf:/etc/nginx/nginx.conf
     ports:
     # nginx_ext_port:container_inter_port
-      - 5005:5005
+      - 80:80
     deploy:
       restart_policy:
         condition: on-failure
@@ -21,22 +21,18 @@ services:
   # Rasa core open source container
   rasa_server:
     container_name: rasa_server
-    environment:
-      - RASA_MONGODB_URI=mongodb://mongo_db:27017
-      - RASA_MONGODB_DB=marlabs_chatbot
-      - RASA_MONGODB_USERNAME=root
-      - RASA_MONGODB_PASSWORD=pass
-
+    image: ghcr.io/marlabs-chatbot/rasa-server-img-prod:0.0.1
+    env_file:
+      - ./.local.env
     expose:
       - 5005
-    image: rasa-server-img-prod:0.0.2
     command:
       - run
       - --enable-api
       - --cors
       - "*"
-    volumes:
-      - ./endpoints.yml:/app/endpoints.yml
+    # volumes:
+      # - ./endpoints.yml:/app/endpoints.yml
     depends_on:
       - action_server
     networks:
@@ -47,18 +43,14 @@ services:
   
   action_server:
     container_name: action_server
-    environment:
-      - MONGODB_URL_LOCAL=mongodb://root:pass@mongo_db:27017
-      # - MONGODB_HOST=mongodb://mongo_db
-      # - MONGODB_PORT=27017
-      # - MONGODB_USERNAME=root
-      # - MONGODB_PASSWORD=pass
+    image: ghcr.io/marlabs-chatbot/action-server-img-prod:0.0.1
+    env_file:
+      - ./.local.env
     expose:
       - 5055
-    image: action-server-img-prod:0.0.2
-    volumes:
-      - ./actions/actions.py:/app/actions/actions.py
-      - ./actions/__init__.py:/app/actions/__init__.py
+    # volumes:
+      # - ./actions/actions.py:/app/actions/actions.py
+      # - ./actions/__init__.py:/app/actions/__init__.py
     depends_on:
       - mongo_db
     networks:

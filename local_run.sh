@@ -15,9 +15,9 @@ then
   #   echo $IMG
   # done
 
-  echo "running docker containers"
+  echo "running docker containers locally!!"
 
-  docker-compose -f docker-compose.dev.yml up -d
+  docker-compose -f docker-compose.local.yml up -d
 else
   echo "Exited!!"
 fi

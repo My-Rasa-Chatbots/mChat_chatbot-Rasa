@@ -34,12 +34,21 @@ ghcr token :
 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
 }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
 
-docker tag bc3a5a5cca44 ghcr.io/marlabs-chatbot/rasa-server-img-prod:0.0.2
-docker tag 8d0b16a5b516 ghcr.io/marlabs-chatbot/action-server-img-prod:0.0.2 
+docker tag 27aff1f0f8a8 ghcr.io/marlabs-chatbot/rasa-server-img-prod:0.0.1
+docker tag f6e95a5f66ae ghcr.io/marlabs-chatbot/action-server-img-prod:0.0.1 
 
-docker push ghcr.io/marlabs-chatbot/rasa-server-img-prod:0.0.2
-docker push ghcr.io/marlabs-chatbot/action-server-img-prod:0.0.2 
+docker push ghcr.io/marlabs-chatbot/rasa-server-img-prod:0.0.1
+docker push ghcr.io/marlabs-chatbot/action-server-img-prod:0.0.1
 ''''
 
 add it to docker file to tie to registry
 LABEL org.opencontainers.image.source https://github.com/OWNER/REPO
+
+
+))))))))))))))))))))))))))))))))))))))))))))))
+MongoDB
+(((((((((((((((((((((((((((((((((((((((((((((
+db.coll.find({ $text: { $search: "marlabs" } }
+Project:{ score: { $meta: "textScore" } }
+
+db.responses.createIndex({ "response_payload.data": "text" })

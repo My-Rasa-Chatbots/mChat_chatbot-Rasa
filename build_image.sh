@@ -47,7 +47,7 @@ fi
 ######################################################################
 echo "================="
 
-RASA_ACTION_IMAGE_TAG=0.0.2
+RASA_ACTION_IMAGE_TAG=0.0.1
 RASA_ACTION_IMAGE_NAME=action-server-img-prod
 
 

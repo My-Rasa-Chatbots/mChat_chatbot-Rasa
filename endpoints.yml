@@ -8,7 +8,7 @@ action_endpoint:
 
 tracker_store:
    type: mongod
-   url: ${RASA_MONGODB_URI}
+   url: ${RASA_MONGODB_HOST}:${RASA_MONGODB_PORT}
    db: ${RASA_MONGODB_DB}
    username: ${RASA_MONGODB_USERNAME}
    password: ${RASA_MONGODB_PASSWORD}

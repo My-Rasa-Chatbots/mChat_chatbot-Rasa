@@ -22,16 +22,13 @@ services:
   # Rasa core open source container
   rasa_server:
     container_name: rasa_server
-    environment:
-      - RASA_MONGODB_URI=mongodb://botdb.cluster-c027mtaarqu1.us-east-1.docdb.amazonaws.com:27017/?tls=true&tlsInsecure=true&tlsCAFile=global-bundle.pem&retryWrites=false&directConnection=true
-      - RASA_MONGODB_DB=marlabs_chatbot
-      - RASA_MONGODB_USERNAME=rasaadmin
-      - RASA_MONGODB_PASSWORD=m8aKa#lL+3IEjn
+    image: rasa-server-img-prod:0.0.1
+    env_file:
+      - ./.prod.env
     ports:
       - 5005:5005
     expose:
       - 5005
-    image: rasa-server-img-prod:0.0.1
     command:
       - run
       - --enable-api
@@ -48,20 +45,16 @@ services:
   # Rasa Action Server
   action_server:
     container_name: action_server
-    environment:
-      - MONGODB_HOST=mongodb://botdb.cluster-c027mtaarqu1.us-east-1.docdb.amazonaws.com
-      - MONGODB_PORT=27017
-      - MONGODB_USERNAME=rasaadmin
-      - MONGODB_PASSWORD=m8aKa#lL+3IEjn
+    image: action-server-img-prod:0.0.1
+    env_file:
+      - ./.prod.env
     expose:
       - 5055
-    image: action-server-img-prod:0.0.1
     networks:
       - rasa_chatbot_network
     deploy:
       restart_policy:
         condition: on-failure
-
 
 networks:
   rasa_chatbot_network:
