@@ -1,6 +1,6 @@
 
 action_endpoint:
- url: http://action_server:5055/webhook
+ url: ${RASA_ACTION_ENDPOINT}
 
 # Tracker store which is used to store the conversations.
 # By default the conversations are stored in memory.
@@ -13,3 +13,12 @@ tracker_store:
    username: ${RASA_MONGODB_USERNAME}
    password: ${RASA_MONGODB_PASSWORD}
    auth_source: admin
+
+# event_broker:
+#   type: kafka
+#   partition_by_sender: False
+#   security_protocol: PLAINTEXT
+#   topic: conversations
+#   url: localhost:9092
+#   client_id: my-app
+
