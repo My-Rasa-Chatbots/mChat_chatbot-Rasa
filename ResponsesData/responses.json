@@ -1,0 +1,194 @@
+[{
+  "response_name": "utter_greet",
+  "response_payload": [
+    {
+      "type": "text",
+      "data": [
+        "Hi! Welcome to Marlabs, how can I help you today?"
+      ],
+      "class": ""
+    }
+  ]
+},{
+  "response_name": "utter_menu",
+  "response_payload": [
+    {
+      "type": "text",
+      "data": [
+        "Please type in your queries or click on any of the topics below,"
+      ],
+      "class": ""
+    },
+    {
+      "type": "buttons",
+      "data": [
+        {
+          "title": "I want to know more about Marlabs",
+          "payload": "/about_marlabs"
+        },
+        {
+          "title": "What do you do?",
+          "payload": "/what_do_you_do"
+        },
+        {
+          "title": "I’m interested in a career with Marlabs",
+          "payload": "/marlabs_career"
+        },
+        {
+          "title": "I want to talk to a digital advisor",
+          "payload": "/talk_to_advisor"
+        },
+        {
+          "title": "Read your latest publications",
+          "payload": "/latest_publications"
+        }
+      ]
+    },
+    {
+      "type": "buttons",
+      "data": [
+        {
+          "title": "Divergence",
+          "url": "https://www.divergence.consulting/"
+        },
+        {
+          "title": "About Us",
+          "url": "https://www.marlabs.com/about-us/"
+        }
+      ]
+    }
+  ]
+},{
+  "response_name": "utter_goodbye",
+  "response_payload": [
+    {
+      "type": "text",
+      "data": [
+        "Sure, feel free to browse around. Goodbye for now."
+      ],
+      "class": ""
+    }
+  ]
+},{
+  "response_name": "utter_can_i_help_more",
+  "response_payload": [
+    {
+      "type": "text",
+      "data": [
+        "Can i help you with anything more?"
+      ],
+      "class": ""
+    }
+  ]
+},{
+  "response_name": "utter_type_query_below",
+  "response_payload": [
+    {
+      "type": "text",
+      "data": [
+        "Please type your query below."
+      ],
+      "class": ""
+    }
+  ]
+},{
+  "response_name": "utter_please_rephrase",
+  "response_payload": [
+    {
+      "type": "text",
+      "data": [
+        "I'm sorry, I didn't quite understand that. could you rephrase your query?"
+      ],
+      "class": ""
+    }
+  ]
+},{
+  "response_name": "utter_about_marlabs",
+  "response_payload": [
+    {
+      "type": "text",
+      "data": [
+        "Marlabs helps leading companies around the world make operations sleeker, keep customers closer, transform data into decisions, de-risk cyberspace, boost legacy systems, and capture novel opportunities and digital-led revenues.\\n\nWe are headquartered in New Jersey, with offices in the US, Germany, Canada, and India. Our 3,000+ global workforce includes highly experienced technology, platform, and industry specialists from the world’s leading technical universities."
+      ],
+      "class": ""
+    }
+  ]
+},{
+  "response_name": "utter_what_do_you_do",
+  "response_payload": [
+    {
+      "type": "text",
+      "data": [
+        "Marlabs provides digital-first strategy and advisory services, rapid solution incubation and prototyping, and agile digital solution engineering. We work with some of the largest enterprises across retail, healthcare and lifesciences, & manufacturing. We also offer prize-winning platforms in AI and analytics, cybersecurity, and IoT.<br><br>I want to know more about: \n"
+      ],
+      "class": ""
+    },
+    {
+      "type": "buttons",
+      "data": [
+        {
+          "title": "Automation",
+          "url": "https://www.marlabs.com/intelligent-automation/"
+        },
+        {
+          "title": "Customer experience",
+          "url": "https://www.marlabs.com/human-experience/"
+        },
+        {
+          "title": "Cybersecurity",
+          "url": "https://www.marlabs.com/cybersecurity/"
+        },
+        {
+          "title": "AI, data & analytics",
+          "url": "https://www.marlabs.com/data-analytics-ai/"
+        }
+      ]
+    }
+  ]
+},{
+  "response_name": "utter_talk_to_advisor",
+  "response_payload": [
+    {
+      "type": "text",
+      "data": [
+        "Great! Go ahead and fill this contact form and we will get back to you as soon as we can. You can also send us an email at <a href='mailto:contact@marlabs.com' target=\"_blank\">contact@marlabs.com</a>."
+      ],
+      "class": ""
+    },
+    {
+      "type": "buttons",
+      "data": [
+        {
+          "title": "Contact Form",
+          "url": "https://www.marlabs.com/contact-us/"
+        },
+        {
+          "title": "Send Email",
+          "url": "mailto:contact@marlabs.com"
+        }
+      ]
+    }
+  ]
+},{
+  "response_name": "utter_marlabs_career",
+  "response_payload": [
+    {
+      "type": "text",
+      "data": [
+        "If you love solving complex challenges through technology and working with some of the smartest minds, we would love to meet you! Head over to our \n<a href=\"https://career.marlabs.com\">careers</a> section for a list of current job openings."
+      ],
+      "class": ""
+    }
+  ]
+},{
+  "response_name": "utter_latest_publications",
+  "response_payload": [
+    {
+      "type": "text",
+      "data": [
+        "Read more on the latest in the world of business and technology: \\n\n<a href=\"https://www.marlabs.com/digital-victories/\">Case studies</a> | <a href=\"https://www.marlabs.com/now-and-next/\">Whitepapers</a> | <a href=\"https://www.marlabs.com/now-and-next/\">Podcasts</a> | <a href=\"https://www.marlabs.com/now-and-next/\">Videos</a>"
+      ],
+      "class": ""
+    }
+  ]
+}]
